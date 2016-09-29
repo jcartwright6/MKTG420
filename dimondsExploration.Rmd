@@ -1,0 +1,67 @@
+---
+title: "dimonds explorations"
+author: "John"
+date: "September 28, 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#reading data
+```{r}
+mydiamonds=read.csv("diamonds.csv")
+```
+
+# dimentions and names of varibles
+```{r}
+dim(mydiamonds)
+nrow(mydiamonds)
+ncol(mydiamonds)
+```
+
+there are 'r' nrow(mydimonds) rows in our data set
+
+```{r}
+colnames(mydiamonds)
+mydiamonds=mydiamonds[,2:11]
+```
+#saving my truncated file
+```{r}
+save(mydiamonds,file="mydiamonds1.rda")
+```
+
+#data sructure
+```{r}
+str(mydiamonds)
+
+
+```
+
+# summary
+O
+```{r}
+summary(mydiamonds)
+```
+#number of levels of a factor
+```{r}
+nlevels(mydiamonds$clarity)
+levels(mydiamonds$clarity)
+```
+
+```{r}
+fairdiamonds=mydiamonds[mydiamonds$cut=="Fair",]
+```
+
+```{r}
+levels(fairdiamonds$cut)
+summary(fairdiamonds$cut)
+```
+
+#refactoring after a subset using a factor varible
+
+```{r}
+
+```
+
+
